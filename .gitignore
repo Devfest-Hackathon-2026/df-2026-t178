@@ -32,3 +32,19 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 *.log
+
+# --- Roamy 開発リポジトリの設定 ---
+
+.venv/
+__pycache__/
+
+# secrets
+.env
+
+# PoC の出力と osmnx のキャッシュ
+route_*.html
+cache/
+data/
+.vscode/
+results/
+api/data/

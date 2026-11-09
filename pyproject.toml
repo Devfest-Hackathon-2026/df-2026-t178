@@ -1,0 +1,37 @@
+[project]
+name = "semantic-walk-poc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kenshiro Nakamura", email = "osusikun521@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.0",
+    "folium>=0.20.0",
+    "google-genai>=2.34.0",
+    "osmnx>=2.1.1",
+    "pydantic>=2.14.3",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.66.1",
+    "streamlit-folium>=0.27.4",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+semantic-walk-poc = "semantic_walk_poc:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "openai>=3.46.0",
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
